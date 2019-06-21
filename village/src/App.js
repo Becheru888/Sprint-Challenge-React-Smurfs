@@ -102,7 +102,7 @@ const StyledDiv = styled.div`
   background-color: #4267B2;
   color:white;
   padding: 0 0 40px 0;
-  max-width: 700px;
+  max-width: 800px;
   margin: 50px auto;
   border-radius: 2px;
   border: 1px solid #53354a;

@@ -50,7 +50,7 @@ const StyledDiv = styled.div`
     padding: 15px 30px;
     border-radius: 4px;
     background-color: #fff;
-    color: #fff;
+    color: #4267B2;
     outline: 0;
     border-style: none;
     font-size: 16px;

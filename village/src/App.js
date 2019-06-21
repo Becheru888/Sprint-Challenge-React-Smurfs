@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import axios from 'axios';
+import {Route, NavLink} from 'react-router-dom';
+import styled from 'styled-components';
 
 import './App.css';
 import SmurfForm from './components/SmurfForm';

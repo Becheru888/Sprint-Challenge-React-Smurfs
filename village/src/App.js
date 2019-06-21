@@ -9,11 +9,7 @@ import Smurfs from './components/Smurfs';
 
 
 const data = "http://localhost:3333/smurfs";
-const smurfData = {
-  name: "",
-  age: "",
-  height: ""
-};
+
 
 console.log(data)
 
@@ -22,7 +18,11 @@ class App extends Component {
     super(props);
     this.state = {
       smurfs: [],
-      smurf: smurfData,
+      newSmurf: {
+         name: "",
+         age: "",
+         height: ""
+      },
       errMsg: null
     };
   }
@@ -42,7 +42,11 @@ class App extends Component {
       .finally(console.log(data));
   };
 
-
+ addData = () => {
+    axios
+    .post(data, this.state.newSmurf)
+    .then(() => this.fetchData());
+  };
 
 
 

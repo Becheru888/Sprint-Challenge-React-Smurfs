@@ -19,9 +19,9 @@ class App extends Component {
     this.state = {
       smurfs: [],
       newSmurf: {
-         name: "",
-         age: "",
-         height: ""
+         name: "2",
+         age: "2",
+         height: "2"
       },
       errMsg: null
     };
@@ -80,7 +80,7 @@ class App extends Component {
           render={props => (
             <SmurfForm
               {...props}
-              smurf={this.state.smurf}
+              newSmurf={this.state.newSmurf}
               handleInput={this.handleInput}
               addData={this.addData}
             />

@@ -1,57 +1,34 @@
 import React, { Component } from 'react';
+import styled from "styled-components";
 
-class SmurfForm extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      name: '',
-      age: '',
-      height: ''
-    };
-  }
-
-  addSmurf = event => {
-    event.preventDefault();
-    // add code to create the smurf using the api
-
-    this.setState({
-      name: '',
-      age: '',
-      height: ''
-    });
-  }
-
-  handleInputChange = e => {
-    this.setState({ [e.target.name]: e.target.value });
-  };
-
-  render() {
-    return (
-      <div className="SmurfForm">
-        <form onSubmit={this.addSmurf}>
-          <input
-            onChange={this.handleInputChange}
-            placeholder="name"
-            value={this.state.name}
-            name="name"
-          />
-          <input
-            onChange={this.handleInputChange}
-            placeholder="age"
-            value={this.state.age}
-            name="age"
-          />
-          <input
-            onChange={this.handleInputChange}
-            placeholder="height"
-            value={this.state.height}
-            name="height"
-          />
-          <button type="submit">Add to the village</button>
-        </form>
-      </div>
-    );
-  }
+function SmurfForm(props) {
+  return (
+    <StyledDiv>
+      <input 
+      type="text" 
+      placeholder="Name" 
+      name="name" 
+      onChange={props.handleInput} />
+      <br />
+      <input 
+      type="text" 
+      placeholder="Age" 
+      name="age" 
+      onChange={props.handleInput} />
+      <br />
+      <input t
+      ype="text" 
+      placeholder="Height" 
+      name="height" 
+      onChange={props.handleInput} />
+      <br />
+      <button onClick={props.addData}>Add to the village</button>
+    </StyledDiv>
+  );
 }
-
 export default SmurfForm;
+
+
+const StyledDiv = styled.div`
+ 
+`;

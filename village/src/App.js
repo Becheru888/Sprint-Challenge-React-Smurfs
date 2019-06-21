@@ -67,7 +67,7 @@ class App extends Component {
         <StyledNav>
           <NavLink to="/">Home</NavLink>
           <NavLink to="/add">Add Smurf</NavLink>
-          <h1 to="/">Facesmurf</h1>
+          <img src='https://i.postimg.cc/wxcBMHNS/smurf.png'></img>
           
         </StyledNav>
 
@@ -102,10 +102,11 @@ const StyledDiv = styled.div`
   background-color: #4267B2;
   color:white;
   padding: 0 0 40px 0;
-  max-width: 500px;
+  max-width: 700px;
   margin: 50px auto;
   border-radius: 2px;
   border: 1px solid #53354a;
+ 
   
 
 `;
@@ -128,8 +129,8 @@ const StyledNav = styled.div`
     }
   }
 
-  h1 {
-    width:170px;
-    margin-left:50px;
+  img {
+    width:300px;
+    
   }
 `;

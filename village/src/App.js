@@ -9,12 +9,21 @@ import Smurfs from './components/Smurfs';
 
 
 const data = "http://localhost:3333/smurfs";
+const smurfData = {
+  name: "",
+  age: "",
+  height: ""
+};
+
+console.log(data)
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
       smurfs: [],
+      smurf: smurfData,
+      errMsg: null
     };
   }
   // add any needed code to ensure that the smurfs collection exists on state and it has data coming from the server

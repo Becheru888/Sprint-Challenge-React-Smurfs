@@ -62,13 +62,13 @@ class App extends Component {
 
   deleteSmurf = (id) => {
 
-    axios.delete(`http://localhost:3333/smurfs${id}`)
+    axios.delete(`http://localhost:3333/smurfs/${id}`)
     .then(() => this.fetchData())
     .catch(err => console.log(err))
   }
 
   deleteSmurfel = () => {
-    this.deleteSmurf(1, this.state.smurfs)  
+    this.deleteSmurf(1)  
 }
 
   render() {

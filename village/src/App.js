@@ -48,16 +48,58 @@ class App extends Component {
     .then(() => this.fetchData());
   };
 
+  handleInput = e => {
+    e.persist();
+    this.setState(prevState => {
+      return {
+        newSmurf: {
+          ...prevState.newSmurf,
+          [e.target.name]: e.target.value
+        }
+      };
+    });
+  };
 
 
   render() {
     return (
-      <div className="App">
-        <SmurfForm />
-        <Smurfs smurfs={this.state.smurfs} />
-      </div>
+      <StyledDiv>
+        <StyledNav>
+          <NavLink to="/">Home</NavLink>
+          <NavLink to="/add">Add Smurf</NavLink>
+        </StyledNav>
+
+        <Route
+          path="/"
+          render={props => <Smurfs {...props} smurfs={this.state.smurfs} />}
+        />
+
+        <Route
+          exact
+          path="/add"
+          render={props => (
+            <SmurfForm
+              {...props}
+              smurf={this.state.smurf}
+              handleInput={this.handleInput}
+              addData={this.addData}
+            />
+          )}
+        />
+      </StyledDiv>
     );
   }
 }
 
 export default App;
+
+
+
+
+const StyledDiv = styled.div`
+ 
+`;
+
+const StyledNav = styled.div`
+ 
+`;

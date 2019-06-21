@@ -17,7 +17,7 @@ function SmurfForm(props) {
       onChange={props.handleInput} />
       <br />
       <input t
-      ype="text" 
+      type="text" 
       placeholder="Height" 
       name="height" 
       onChange={props.handleInput} />

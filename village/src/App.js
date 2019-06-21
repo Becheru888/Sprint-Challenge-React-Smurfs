@@ -19,9 +19,9 @@ class App extends Component {
     this.state = {
       smurfs: [],
       newSmurf: {
-         name: "2",
-         age: "2",
-         height: "2"
+         name: "",
+         age: "",
+         height: ""
       },
       errMsg: null
     };
@@ -67,6 +67,8 @@ class App extends Component {
         <StyledNav>
           <NavLink to="/">Home</NavLink>
           <NavLink to="/add">Add Smurf</NavLink>
+          <h1 to="/">Facesmurf</h1>
+          
         </StyledNav>
 
         <Route
@@ -97,9 +99,37 @@ export default App;
 
 
 const StyledDiv = styled.div`
- 
+  background-color: #4267B2;
+  color:white;
+  padding: 0 0 40px 0;
+  max-width: 500px;
+  margin: 50px auto;
+  border-radius: 2px;
+  border: 1px solid #53354a;
+  
+
 `;
 
 const StyledNav = styled.div`
- 
+  display:flex;
+  position: relative;
+  background-color: #4267B2;
+  padding: 20px;
+  a {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    text-decoration: none;
+    color: white;
+    padding: 21px;
+    height:20px;
+    
+    &:hover {
+      box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    }
+  }
+
+  h1 {
+    width:170px;
+    margin-left:50px;
+  }
 `;
